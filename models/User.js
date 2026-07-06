@@ -49,6 +49,59 @@ const userSchema = new mongoose.Schema(
           "Password must contain at least one uppercase letter, one lowercase letter, one number, and one special character",
       },
     },
+
+    branch: {
+      type: String,
+      trim: true,
+      maxlength: [100, "Branch cannot exceed 100 characters"],
+    },
+
+    college: {
+      type: String,
+      trim: true,
+      maxlength: [150, "College cannot exceed 150 characters"],
+    },
+
+    year: {
+      type: String,
+      trim: true,
+      maxlength: [10, "Year cannot exceed 10 characters"],
+    },
+
+    skills: {
+      type: [String],
+      default: [],
+    },
+
+    projects: {
+      type: [String],
+      default: [],
+    },
+
+    achievements: {
+      type: [String],
+      default: [],
+    },
+
+    linkedin: {
+      type: String,
+      trim: true,
+    },
+
+    github: {
+      type: String,
+      trim: true,
+    },
+
+    profilePicture: {
+      type: String,
+      trim: true,
+    },
+
+    resume: {
+      type: String,
+      trim: true,
+    },
   },
   {
     timestamps: true,
