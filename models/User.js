@@ -62,6 +62,12 @@ const userSchema = new mongoose.Schema(
       maxlength: [150, "College cannot exceed 150 characters"],
     },
 
+    location: {
+      type: String,
+      trim: true,
+      maxlength: [100, "Location cannot exceed 100 characters"],
+    },
+
     year: {
       type: String,
       trim: true,
@@ -101,7 +107,8 @@ const userSchema = new mongoose.Schema(
     resume: {
       type: String,
       trim: true,
-    },
+    }, 
+    
   },
   {
     timestamps: true,

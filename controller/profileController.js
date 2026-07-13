@@ -41,6 +41,7 @@ exports.updateProfile = async (req, res) => {
       "name",
       "branch",
       "college",
+      "location",
       "year",
       "linkedin",
       "github",

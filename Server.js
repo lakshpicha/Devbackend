@@ -4,6 +4,7 @@ const cors = require("cors");
 const cookieParser = require("cookie-parser");
 const authRouter = require("./routes/authRoutes");
 const profileRouter = require("./routes/profileRoutes");
+const studentRouter = require("./routes/studentRoutes");
 const connectDB = require("./config/db");
 
 dotenv.config();
@@ -20,6 +21,7 @@ app.use(cookieParser());
 
 app.use("/auth", authRouter);
 app.use("/api/profile", profileRouter);
+app.use("/api/users", studentRouter);
 
 app.get("/", (req, res) => {
   res.send("API Running");
